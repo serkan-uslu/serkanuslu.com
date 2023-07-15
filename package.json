@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "scripts": {
     "dev": "next dev",
