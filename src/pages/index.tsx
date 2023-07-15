@@ -1,3 +1,9 @@
+import { Button } from "@mui/material";
+
 export default function Home() {
-  return "Hello World";
+  return (
+    <Button variant="outlined" color="secondary">
+      Sample Button
+    </Button>
+  );
 }
