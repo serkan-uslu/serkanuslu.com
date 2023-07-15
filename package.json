@@ -1,5 +1,11 @@
 {
   "name": "serkanuslu.com",
+  "description": "My personel website.",
+  "author": {
+    "name": "Serkan USLU",
+    "url": "https://serkanuslu.com"
+  },
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
@@ -14,7 +20,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "find:unused": "next-unused"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -36,6 +43,13 @@
   },
   "devDependencies": {
     "husky": "^8.0.3",
+    "next-unused": "^0.0.6",
     "prettier": "3.0.0"
+  },
+  "next-unused": {
+    "debug": true,
+    "entrypoints": [
+      "src"
+    ]
   }
 }
