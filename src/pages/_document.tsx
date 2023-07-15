@@ -1,10 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import createEmotionServer from "@emotion/server/create-instance";
-import Document from "next/document";
-import React from "react";
-import createCache from "@emotion/cache";
+import { Html, Head, Main, NextScript } from 'next/document';
+import createEmotionServer from '@emotion/server/create-instance';
+import Document from 'next/document';
+import React from 'react';
+import createCache from '@emotion/cache';
 
-const cache = createCache({ key: "css", prepend: true });
+const cache = createCache({ key: 'css', prepend: true });
 
 export default class CustomDocument extends Document {
   render(): JSX.Element {
@@ -27,7 +27,7 @@ CustomDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(" ")}`}
+      data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
       dangerouslySetInnerHTML={{ __html: style.css }}
     />

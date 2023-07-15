@@ -1,6 +1,6 @@
-import { Button, Box, Toolbar, Typography } from "@mui/material";
+import { Button, Box, Toolbar, Typography } from '@mui/material';
 
-import TestComponent from "@/components/button";
+import TestComponent from '@/components/button';
 
 export default function Home() {
   return (
