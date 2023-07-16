@@ -13,8 +13,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Container } from '@mui/material';
-
+import { Container, Menu, MenuItem } from '@mui/material';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { AccountCircle } from '@mui/icons-material';
+import TranslateIcon from '@mui/icons-material/Translate';
 interface Props {
   window?: () => Window;
 }
@@ -30,10 +33,23 @@ export default function DrawerAppBar(props: Props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const router = useRouter();
+  const { locales, asPath } = router;
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Serkan Uslu
       </Typography>
       <Divider />
       <List>
@@ -81,6 +97,45 @@ export default function DrawerAppBar(props: Props) {
                   {item}
                 </Button>
               ))}
+            </Box>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <div>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleMenu}
+                  color="inherit"
+                >
+                  <TranslateIcon />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  {locales?.map((localeName, index) => {
+                    return (
+                      <MenuItem key={index} onClick={handleClose}>
+                        <Link href={asPath} passHref locale={localeName}>
+                          {localeName}
+                        </Link>
+                      </MenuItem>
+                    );
+                  })}
+                </Menu>
+              </div>
             </Box>
           </Toolbar>
         </Container>
