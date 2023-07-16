@@ -52,12 +52,19 @@ export const getServerSideProps: GetServerSideProps<MyPageProps> = async (
 
   const mdxSource = await serialize(fileContents);
 
-  // Dosyanın içeriğini sayfa bileşenine aktarın
-  return {
-    props: {
-      mdxSource,
-    },
-  };
+  if (fileContents.length > 0) {
+    // Dosyanın içeriğini sayfa bileşenine aktarın
+    return {
+      props: {
+        mdxSource,
+      },
+    };
+  } else {
+    // Dosyanın içeriğini sayfa bileşenine aktarın
+    return {
+      notFound: true,
+    };
+  }
 };
 
 export default MyPage;
