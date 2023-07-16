@@ -1,8 +1,11 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import { purple } from '@mui/material/colors';
+import { NextSeo } from 'next-seo';
 
 export default function Error() {
+  <NextSeo nofollow={true} noindex={true} />;
+
   return (
     <Box
       sx={{
