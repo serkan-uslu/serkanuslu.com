@@ -25,7 +25,24 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Blog', 'About'];
+const navItems = [
+  {
+    name: 'Home',
+    url: '/',
+  },
+  {
+    name: 'Blog',
+    url: '/blog',
+  },
+  {
+    name: 'About',
+    url: '/about',
+  },
+  {
+    name: 'Contact',
+    url: '/contact',
+  },
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -56,9 +73,9 @@ export default function DrawerAppBar(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.url} disablePadding>
+            <ListItemButton href={item.url} sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,9 +112,9 @@ export default function DrawerAppBar(props: Props) {
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff' }}>
-                  {item}
-                </Button>
+                <Link href={item.url} key={item.url}>
+                  <Button sx={{ color: '#fff' }}>{item.name}</Button>
+                </Link>
               ))}
             </Box>
             {/* <Box sx={{ display: { xs: 'none', sm: 'block' } }}>

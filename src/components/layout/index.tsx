@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <Toolbar></Toolbar>
+      <Toolbar />
       <main>{children}</main>
       <Footer />
     </>
