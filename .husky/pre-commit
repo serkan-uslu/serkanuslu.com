@@ -3,5 +3,6 @@
 
 echo 'Git hook started'
 npx lint-staged
+npm run test
 echo 'Git hook Finished'
 
