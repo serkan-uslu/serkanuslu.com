@@ -1,5 +1,7 @@
-import Navbar from '@/components/header';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 import { ReactNode } from 'react';
+import { Divider, Toolbar } from '@mui/material';
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,8 +10,10 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <Navbar />
+      <Header />
+      <Toolbar></Toolbar>
       <main>{children}</main>
+      <Footer />
     </>
   );
 }

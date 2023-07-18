@@ -1,4 +1,4 @@
-import { Button, Box, Toolbar, Typography } from '@mui/material';
+import { Button, Box, Toolbar, Typography, Container } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import setLanguage from 'next-translate/setLanguage';
@@ -12,10 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        {t('title')}
-      </Box>
+      <Container maxWidth={'md'}>{t('title')}</Container>
     </>
   );
 }

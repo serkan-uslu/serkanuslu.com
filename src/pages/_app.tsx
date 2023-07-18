@@ -1,15 +1,18 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme from 'config/theme';
 import createEmotionCache from 'config/createEmotionCache';
 import Layout from '@/components/layout';
 import createCache from '@emotion/cache';
 import { DefaultSeo } from 'next-seo';
 import Script from 'next/script';
+import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { ColorModeContext } from 'context/themeColorMode'; // import the context
+import createMyTheme from 'config/theme'; // import the theme function
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -26,18 +29,34 @@ export default function MyApp(props: MyAppProps) {
     stylisPlugins: [],
   });
 
-  return (
-    <CacheProvider value={cacheRTL}>
-      <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-      />
+  const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [],
+  );
 
-      <Script id="google-analytics-script" strategy="lazyOnload">
-        {`
+  const theme = React.useMemo(
+    () => createMyTheme(mode), // use the theme function here
+    [mode],
+  );
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <CacheProvider value={cacheRTL}>
+        <Head>
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+        </Head>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        />
+
+        <Script id="google-analytics-script" strategy="lazyOnload">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -45,24 +64,25 @@ export default function MyApp(props: MyAppProps) {
           page_path: window.location.pathname,
           });
     `}
-      </Script>
-      <DefaultSeo
-        title="Default Title"
-        description="Default description"
-        openGraph={{
-          type: 'website',
-          locale: 'tr-TR',
-          url: 'https://www.serkanuslu.com/',
-          site_name: 'SiteName',
-        }}
-      />
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </CacheProvider>
+        </Script>
+        <DefaultSeo
+          title="Default Title"
+          description="Default description"
+          openGraph={{
+            type: 'website',
+            locale: 'tr-TR',
+            url: 'https://www.serkanuslu.com/',
+            site_name: 'SiteName',
+          }}
+        />
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </CacheProvider>
+    </ColorModeContext.Provider>
   );
 }

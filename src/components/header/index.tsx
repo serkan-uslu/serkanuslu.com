@@ -18,12 +18,14 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { AccountCircle } from '@mui/icons-material';
 import TranslateIcon from '@mui/icons-material/Translate';
+import ColorToggleButton from '@/components/colorToggleButton';
+
 interface Props {
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Blog', 'About'];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -69,8 +71,8 @@ export default function DrawerAppBar(props: Props) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav" color="primary" enableColorOnDark>
-        <Container maxWidth={'md'}>
+      <AppBar component="nav">
+        <Container maxWidth={'lg'}>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -98,7 +100,7 @@ export default function DrawerAppBar(props: Props) {
                 </Button>
               ))}
             </Box>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {/* <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <div>
                 <IconButton
                   size="large"
@@ -136,6 +138,9 @@ export default function DrawerAppBar(props: Props) {
                   })}
                 </Menu>
               </div>
+            </Box> */}
+            <Box>
+              <ColorToggleButton></ColorToggleButton>
             </Box>
           </Toolbar>
         </Container>
