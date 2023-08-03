@@ -1,8 +1,8 @@
+import React from 'react';
+import Document from 'next/document';
+import createCache from '@emotion/cache';
 import { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import Document from 'next/document';
-import React from 'react';
-import createCache from '@emotion/cache';
 
 const cache = createCache({ key: 'css', prepend: true });
 

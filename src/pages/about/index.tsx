@@ -2,32 +2,23 @@ import fs from 'fs';
 import path from 'path';
 import React from 'react';
 import matter from 'gray-matter';
-import { Box } from '@mui/material';
-import { IPageBlog } from 'models';
+import { IPageAbout } from 'models';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 
-function MyPage({ mdxSource }: IPageBlog) {
-  return (
-    <Box>
-      <MDXRemote {...mdxSource} />
-    </Box>
-  );
+function PageAbout({ mdxSource }: IPageAbout) {
+  return <MDXRemote {...mdxSource} />;
 }
 
-export const getServerSideProps: GetServerSideProps<IPageBlog> = async (
+export const getServerSideProps: GetServerSideProps<IPageAbout> = async (
   context: GetServerSidePropsContext,
 ) => {
   const locale = context.locale;
 
-  const slug = Array.isArray(context?.params?.slug)
-    ? context?.params?.slug[0]
-    : '';
-
   const filePath = path.join(
     process.cwd(),
-    `/src/content/blog/${slug}/index-${locale}.mdx`,
+    `/src/content/about/index-${locale}.mdx`,
   );
 
   let fileContents;
@@ -49,11 +40,10 @@ export const getServerSideProps: GetServerSideProps<IPageBlog> = async (
       },
     };
   } else {
-    // Dosyanın içeriğini sayfa bileşenine aktarın
     return {
       notFound: true,
     };
   }
 };
 
-export default MyPage;
+export default PageAbout;

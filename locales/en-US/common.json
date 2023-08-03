@@ -1,3 +1,8 @@
 {
-    "title": "Hello World"
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "bookmarks": "Bookmarks",
+    "readmore": "Read Post"
 }

@@ -1,20 +1,20 @@
-import * as React from 'react';
 import Head from 'next/head';
-import { AppProps } from 'next/app';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import createEmotionCache from 'config/createEmotionCache';
-import Layout from '@/components/layout';
-import createCache from '@emotion/cache';
-import { DefaultSeo } from 'next-seo';
+import * as React from 'react';
 import Script from 'next/script';
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { ColorModeContext } from 'context/themeColorMode'; // import the context
-import createMyTheme from 'config/theme'; // import the theme function
+import { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import Layout from 'container/layout';
+import createCache from '@emotion/cache';
+import createMyTheme from 'config/theme';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { ColorModeContext } from 'context/themeColorMode';
+import createEmotionCache from 'config/createEmotionCache';
+import { CacheProvider, EmotionCache } from '@emotion/react';
 
-// Client-side cache, shared for the whole session of the user in the browser.
+// css
+import '../styles/globals.css';
+
 const clientSideEmotionCache = createEmotionCache();
 
 interface MyAppProps extends AppProps {
@@ -25,11 +25,12 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   const cacheRTL = createCache({
-    key: 'muirtl',
+    key: 'muicache',
     stylisPlugins: [],
   });
 
   const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -39,10 +40,7 @@ export default function MyApp(props: MyAppProps) {
     [],
   );
 
-  const theme = React.useMemo(
-    () => createMyTheme(mode), // use the theme function here
-    [mode],
-  );
+  const theme = React.useMemo(() => createMyTheme(mode), [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -76,7 +74,6 @@ export default function MyApp(props: MyAppProps) {
           }}
         />
         <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           <Layout>
             <Component {...pageProps} />

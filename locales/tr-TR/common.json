@@ -1,3 +1,8 @@
 {
-    "title": "Selam Dünya"
+    "home": "Anasayfa",
+    "blog": "Blog",
+    "about": "Hakkımda",
+    "portfolio": "Portfolio",
+    "bookmarks": "Yer işaretlerim",
+    "readmore": "Yazıyı Oku"
 }

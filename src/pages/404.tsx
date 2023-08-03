@@ -1,9 +1,8 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
-import { purple } from '@mui/material/colors';
 import { NextSeo } from 'next-seo';
+import { Box, Button, Typography } from '@mui/material';
 
-export default function Error() {
+export default function PageNotFound() {
   <NextSeo nofollow={true} noindex={true} />;
 
   return (

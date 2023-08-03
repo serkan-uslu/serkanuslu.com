@@ -8,5 +8,6 @@
         "*": [
             "common"
         ]
-    }
+    },
+    "localeDetection": true
 }
