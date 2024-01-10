@@ -1,24 +1,24 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  title: 'Serkan USLU | Frontend Developer',
+  author: 'Serkan USLU',
+  headerTitle: 'Serkan USLU',
+  description: 'Serkan USLU',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://serkanuslu.com/',
+  siteRepo: 'https://github.com/serkan-uslu/serkanuslu.com',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
+  // mastodon: 'https://mastodon.social/@mastodonuser',
+  email: 'info@serkanuslu.com',
+  github: 'https://github.com/serkan-uslu',
+  // twitter: 'https://twitter.com/Twitter',
+  // facebook: 'https://facebook.com',
+  // youtube: 'https://youtube.com',
+  linkedin: 'https://www.linkedin.com/in/serkan-uslu',
+  // threads: 'https://www.threads.net',
+  // instagram: 'https://www.instagram.com',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -42,7 +42,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    // provider: 'buttondown',
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the
