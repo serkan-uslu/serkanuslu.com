@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/react'
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Space_Grotesk } from 'next/font/google'
 // import { Analytics, AnalyticsConfig } from 'pliny/analytics'
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Header />
                 <main className="mb-auto">{children}</main>
                 <Analytics />
+                <SpeedInsights />
               </SearchProvider>
               <Footer />
             </div>
