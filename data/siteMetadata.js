@@ -17,6 +17,7 @@ const siteMetadata = {
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/serkan-uslu',
+  medium: 'https://medium.com/@serkan-uslu',
   // threads: 'https://www.threads.net',
   // instagram: 'https://www.instagram.com',
   locale: 'en-US',
