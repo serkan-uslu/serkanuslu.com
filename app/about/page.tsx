@@ -3,8 +3,8 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
-import ToolList from '@/data/tools'
-import Tools from '@/app/Tools'
+// import ToolList from '@/data/tools'
+// import Tools from '@/app/Tools'
 
 export const metadata = genPageMetadata({ title: 'About' })
 
@@ -16,7 +16,7 @@ export default function Page() {
     <>
       <AuthorLayout content={mainContent}>
         <MDXLayoutRenderer code={author.body.code} />
-        <Tools tools={ToolList} />
+        {/* <Tools tools={ToolList} /> */}
       </AuthorLayout>
     </>
   )
