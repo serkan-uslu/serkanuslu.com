@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Serkan USLU | Frontend Developer',
   author: 'Serkan USLU',
-  headerTitle: 'Serkan USLU',
+  headerTitle: 'S.U.',
   description: 'Hi. My name is Serkan. Welcome my website.',
   language: 'en-us',
   theme: 'system', // system, dark or light

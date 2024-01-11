@@ -1,9 +1,17 @@
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import Main from './Main'
+import Tools from './Tools'
+import Posts from './Posts'
+import Introduction from './Introduction'
+import ToolList from '@/data/tools'
+import PostList from '@/data/posts'
 
 export default async function Page() {
-  const sortedPosts = sortPosts(allBlogs)
-  const posts = allCoreContent(sortedPosts)
-  return <Main posts={posts} />
+  return (
+    <>
+      <Introduction />
+      <Posts posts={PostList} />
+      <Tools tools={ToolList} />
+    </>
+  )
 }
