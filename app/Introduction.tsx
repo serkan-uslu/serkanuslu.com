@@ -1,13 +1,19 @@
-import Image from 'next/image'
-
 export default function Introduction() {
   return (
     <>
       <div className="mb-8 mt-8 flex space-x-4 rounded-xl">
-        <div>
-          <h4 className="mb-4 text-center text-xl font-semibold md:text-left">
+        <div className="prose max-w-none">
+          <h4 className="text-center text-xl font-semibold md:text-left">
             Hi there, My name is Serkan
           </h4>
+          <div className="relative h-48 w-full overflow-hidden rounded-2xl">
+            <img
+              className="absolute inset-0 m-0 h-48 w-full object-cover"
+              src="/serkan-uslu.png"
+              alt="Serkan USLU | Frontend Developer"
+            />
+          </div>
+
           <p className="text-md mb-2">
             Dynamic Frontend Developer Specializing in E-commerce Websites, Always Seeking
             Innovation and Continuously Enhancing Skills in Frontend Development.
@@ -26,11 +32,11 @@ export default function Introduction() {
           <p className="text-md mb-2">
             Fun fact:{' '}
             <span className="font-semibold underline">
-              Listen Rap Music. Make music. Drawing is textured art.
+              Listen Rap Music. Drawing is textured art.
             </span>
           </p>
           <p className="text-md mb-2">
-            Also I'm an <span className="font-semibold underline">algorithmic trader</span> on
+            Also I'm an <span className="font-semibold underline">algorithmic trader</span> on{' '}
             <span className="font-semibold underline">
               Crypto Currency Market, BIST100, S&P500.
             </span>

@@ -9,6 +9,7 @@ export default function Tools({ tools }) {
           <a
             href={item.link}
             key={index}
+            title={item.altText}
             className="fl20 h-20 w-20 items-center justify-center border-2 bg-white p-4"
           >
             <Image
