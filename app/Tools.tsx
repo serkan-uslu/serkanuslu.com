@@ -9,11 +9,11 @@ export default function Tools({ tools }) {
           <a
             href={item.link}
             key={index}
-            className="w-18 fl20 h-20 items-center justify-center border-2 bg-white p-4"
+            className="fl20 h-20 w-20 items-center justify-center border-2 bg-white p-4"
           >
             <Image
-              width={20}
-              height={20}
+              width={18}
+              height={18}
               src={item.logo}
               alt={item.altText}
               className="h-full w-full object-cover"
