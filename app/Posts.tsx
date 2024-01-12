@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function Posts({ posts }) {
   return (
     <>
@@ -7,10 +5,14 @@ export default function Posts({ posts }) {
       <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
         {posts.map((post, index) => (
           <div key={index} className="rounded-lg border border-gray-200 p-4">
-            <h3 className="text-lg font-semibold">{post.title}</h3>
+            <h3 className="text-md line-clamp-1 font-semibold">{post.title}</h3>
             <p className="text-sm text-gray-500">{post.date}</p>
-            <p className="text-md mb-4">{post.description}</p>
-            <a href={post.link} className="text-blue-500 hover:text-blue-600">
+            <p className="mb-4 text-sm">{post.description}</p>
+            <a
+              href={post.link}
+              target="_blank"
+              className="text-sm font-bold text-pink-500 hover:text-pink-600"
+            >
               Read more...
             </a>
           </div>
