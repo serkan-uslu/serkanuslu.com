@@ -81,6 +81,11 @@ const ToolList: Tool[] = [
     altText: 'eslint',
   },
   {
+    logo: '/icons/prettier-icon.png',
+    name: 'prettier',
+    altText: 'prettier',
+  },
+  {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
     name: 'redux',
     altText: 'redux',
