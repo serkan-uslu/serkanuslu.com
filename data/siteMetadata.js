@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Serkan USLU | Frontend Developer',
   author: 'Serkan USLU',
   headerTitle: 'S.U.',
-  description: 'Serkan USLU - Frontend Developer | Javascript, Typescript, React.js,React Native',
+  description: 'Serkan USLU - Frontend Developer | Javascript, Typescript, React.js, React Native',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.serkanuslu.com',
