@@ -31,9 +31,29 @@ const ToolList: Tool[] = [
     altText: 'babel',
   },
   {
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    name: 'node js',
+    altText: 'node js',
+  },
+  {
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg',
+    name: 'npm',
+    altText: 'npm',
+  },
+  {
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg',
+    name: 'yarn',
+    altText: 'yarn',
+  },
+  {
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
     name: 'react',
     altText: 'react',
+  },
+  {
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+    name: 'next js',
+    altText: 'next js',
   },
   {
     logo: 'https://reactnative.dev/img/header_logo.svg',
@@ -74,6 +94,16 @@ const ToolList: Tool[] = [
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     name: 'git',
     altText: 'git',
+  },
+  {
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+    name: 'vs code',
+    altText: 'vs code',
+  },
+  {
+    logo: 'https://cdn.worldvectorlogo.com/logos/postman.svg',
+    name: 'postman',
+    altText: 'postman',
   },
   {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg',
