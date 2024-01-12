@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Posts({ posts }) {
   return (
     <>
-      <h4 className="mb-4 text-center text-xl font-semibold md:text-left">My Posts</h4>
+      <h4 className="mb-4 text-center text-xl font-semibold md:text-left">Last Posts</h4>
       <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
         {posts.map((post, index) => (
           <div key={index} className="rounded-lg border border-gray-200 p-4">
