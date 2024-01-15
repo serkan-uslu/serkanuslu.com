@@ -2,11 +2,11 @@ export default function Introduction() {
   return (
     <>
       <div className="mb-8 mt-8 flex space-x-4 rounded-xl">
-        <div className="prose max-w-none">
-          <h4 className="text-center text-xl font-semibold md:text-left">
+        <div className="prose max-w-none dark:prose-invert">
+          <h4 className="mb-4 text-center text-xl font-semibold md:text-left">
             Hi there, My name is Serkan
           </h4>
-          <div className="relative h-48 w-full overflow-hidden rounded-2xl">
+          <div className="relative h-48 w-full overflow-hidden rounded-2xl border-2">
             <img
               className="absolute inset-0 m-0 h-48 w-full object-cover"
               src="/serkan-uslu.png"
