@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { useParams } from 'next/navigation'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { useTranslation } from 'app/[locale]/i18n/client'
 
 const ThemeSwitch = () => {
+  const locale = useParams()?.locale as LocaleTypes
+  const { t } = useTranslation(locale, '')
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
 
@@ -16,7 +21,7 @@ const ThemeSwitch = () => {
 
   return (
     <button
-      aria-label="Toggle Dark Mode"
+      aria-label={t('darkmode')}
       onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       <svg

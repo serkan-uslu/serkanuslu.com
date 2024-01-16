@@ -9,15 +9,24 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import Share from '@/components/Share'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
 
-interface LayoutProps {
+interface PostBannerProps {
   content: CoreContent<Blog>
   children: ReactNode
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
+  params: { locale: LocaleTypes }
 }
 
-export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
+export default function PostMinimal({
+  content,
+  next,
+  prev,
+  children,
+  params: { locale },
+}: PostBannerProps) {
   const { slug, title, images } = content
   const displayImage =
     images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
@@ -40,17 +49,14 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
             </div>
           </div>
           <div className="prose max-w-none py-4 dark:prose-invert">{children}</div>
-          {siteMetadata.comments && (
-            <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300" id="comment">
-              <Comments slug={slug} />
-            </div>
-          )}
+          <Share title={title} slug={slug} />
+
           <footer>
             <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
               {prev && prev.path && (
                 <div className="pt-4 xl:pt-8">
                   <Link
-                    href={`/${prev.path}`}
+                    href={`/${locale}/${prev.path}`}
                     className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     aria-label={`Previous post: ${prev.title}`}
                   >
@@ -61,7 +67,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
               {next && next.path && (
                 <div className="pt-4 xl:pt-8">
                   <Link
-                    href={`/${next.path}`}
+                    href={`/${locale}/${next.path}`}
                     className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     aria-label={`Next post: ${next.title}`}
                   >

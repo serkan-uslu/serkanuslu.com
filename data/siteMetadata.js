@@ -2,9 +2,9 @@
 const siteMetadata = {
   title: 'Serkan USLU | Frontend Developer',
   author: 'Serkan USLU',
-  headerTitle: 'S.U.',
+  headerTitle: 'Serkan USLU',
   description: 'Serkan USLU - Frontend Developer | Javascript, Typescript, React.js, React Native',
-  language: 'en-us',
+  language: 'tr',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.serkanuslu.com',
   siteRepo: 'https://www.github.com/serkan-uslu/serkanuslu.com',
@@ -13,14 +13,13 @@ const siteMetadata = {
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'info@serkanuslu.com',
   github: 'https://github.com/serkan-uslu',
+  medium: 'https://medium.com/@serkan-uslu',
   // twitter: 'https://twitter.com/Twitter',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/serkan-uslu',
-  medium: 'https://medium.com/@serkan-uslu',
-  // threads: 'https://www.threads.net',
-  // instagram: 'https://www.instagram.com',
-  locale: 'en-US',
+  // medium: 'https://medium.com/@serkan-uslu',
+  locale: 'tr',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -30,7 +29,7 @@ const siteMetadata = {
     //   umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
     // },
     // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    //   plausibleDataDomain: '', // e.g.
     // },
     // simpleAnalytics: {},
     // posthogAnalytics: {

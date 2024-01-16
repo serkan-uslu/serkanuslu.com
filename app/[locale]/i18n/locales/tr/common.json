@@ -1,0 +1,22 @@
+{
+  "home": "Ana Sayfa",
+  "blog": "Blog",
+  "tags": "Etiketler",
+  "projects": "Projelerim",
+  "about": "Hakkımda",
+  "lang": "Dil",
+  "showmenu": "Menüyü Göster",
+  "scrollcomment": "Yorum yapmak için kaydır",
+  "scrolltop": "Sayfanın başına dön",
+  "darkmode": "Karanlık moda geç",
+  "content": "İçerik",
+  "kbarplaceholder": "Komut yaz veya arama yap",
+  "loading": "Yükleniyor...",
+  "noresults": "Arama sonucu bulunamadı...",
+  "poststagged": "Etiketlenen gönderileri gör",
+  "share": "Paylaş:",
+  "facebookshare": "Facebook paylaşım butonu",
+  "twittershare": "Twitter paylaşım butonu",
+  "linkedinshare": "LinkedIn paylaşım butonu",
+  "pinterestshare": "Pinterest paylaşım butonu"
+}

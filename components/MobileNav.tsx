@@ -3,8 +3,13 @@
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import { useParams } from 'next/navigation'
+import { useTranslation } from 'app/[locale]/i18n/client'
+import type { LocaleTypes } from 'app/[locale]/i18n/settings'
 
 const MobileNav = () => {
+  const locale = useParams()?.locale as LocaleTypes
+  const { t } = useTranslation(locale, '')
   const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
@@ -21,7 +26,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <button aria-label="Toggle Menu" onClick={onToggleNav} className="sm:hidden">
+      <button aria-label={t('showmenu')} onClick={onToggleNav} className="sm:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -60,11 +65,11 @@ const MobileNav = () => {
           {headerNavLinks.map((link) => (
             <div key={link.title} className="px-12 py-4">
               <Link
-                href={link.href}
+                href={`/${locale}${link.href}`}
                 className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                 onClick={onToggleNav}
               >
-                {link.title}
+                {t(`${link.title.toLowerCase()}`)}
               </Link>
             </div>
           ))}

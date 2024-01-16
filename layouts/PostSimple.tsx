@@ -8,17 +8,27 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { createTranslation } from 'app/[locale]/i18n/server'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import Share from '@/components/Share'
 
-interface LayoutProps {
+interface PostSimpleProps {
   content: CoreContent<Blog>
   children: ReactNode
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
+  params: { locale: LocaleTypes }
 }
 
-export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title } = content
-
+export default async function PostLayout({
+  content,
+  next,
+  prev,
+  children,
+  params: { locale },
+}: PostSimpleProps) {
+  const { slug, date, title, language } = content
+  const { t } = await createTranslation(locale, 'home')
   return (
     <SectionContainer>
       <ScrollTopAndComment />
@@ -28,9 +38,9 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
               <dl>
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">{t('pub')}</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                    <time dateTime={date}>{formatDate(date, language)}</time>
                   </dd>
                 </div>
               </dl>
@@ -43,17 +53,13 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
             </div>
-            {/* {siteMetadata.comments && (
-              <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300" id="comment">
-                <Comments slug={slug} />
-              </div>
-            )} */}
+            <Share title={title} slug={slug} />
             <footer>
               <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
                 {prev && prev.path && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/${prev.path}`}
+                      href={`/${locale}/${prev.path}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                       aria-label={`Previous post: ${prev.title}`}
                     >
@@ -64,7 +70,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
                 {next && next.path && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/${next.path}`}
+                      href={`/${locale}/${next.path}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                       aria-label={`Next post: ${next.title}`}
                     >
