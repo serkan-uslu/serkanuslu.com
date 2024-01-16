@@ -1,6 +1,6 @@
 {
-  "hello-world": {
-    "en": "posts/hello-world",
-    "tr": "articles/merhaba-dunya"
+  "git-hook-commit-message": {
+    "en": "posts/git-hook-commit-message",
+    "tr": "articles/git-hook-commit-message"
   }
 }
