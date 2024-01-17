@@ -1,6 +1,10 @@
 {
   "git-hook-commit-message": {
-    "en": "posts/git-hook-commit-message",
-    "tr": "articles/git-hook-commit-message"
+    "tr": "articles/git-hook-commit-message",
+    "en": "posts/git-hook-commit-message"
+  },
+  "my-website": {
+    "tr": "articles/yeni-websitem",
+    "en": "posts/my-website"
   }
 }
