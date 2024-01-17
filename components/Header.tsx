@@ -31,6 +31,7 @@ const Header = () => {
               ) : (
                 siteMetadata.headerTitle
               )}
+              <div className="h-6 text-2xl font-semibold sm:hidden">S.U</div>
             </div>
           </Link>
         </div>
