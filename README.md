@@ -27,6 +27,7 @@ Welcome to my personal website! After a long break, I've finally taken the time 
 - Lint git commit with Commitlint
 - Sitemap.xml and robots.txt auto generated
 - SEO-friendly
+- Contents are created with Contentlayer
 
 ## Built-in feature from Next.js:
 
