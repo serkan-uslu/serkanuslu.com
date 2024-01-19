@@ -1,4 +1,4 @@
-import { allBlogs } from '.contentlayer/generated'
+import { allBlogs, allBookmarks } from '.contentlayer/generated'
 import { LocaleTypes, locales } from 'app/[locale]/i18n/settings'
 import slugMap from 'app/[locale]/localeid-map.json'
 import { useParams, usePathname, useRouter, useSelectedLayoutSegments } from 'next/navigation'
