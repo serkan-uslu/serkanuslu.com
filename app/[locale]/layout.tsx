@@ -8,10 +8,11 @@ import TwSizeIndicator from '@/components/helper/TwSizeIndicator'
 import { SearchProvider } from '@/components/search/SearchProvider'
 import { maindescription, maintitle } from '@/data/localeMetadata'
 import siteMetadata from '@/data/siteMetadata'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { dir } from 'i18next'
 import { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { LocaleTypes, locales } from './i18n/settings'
 import { ThemeProviders } from './theme-providers'
 
@@ -93,12 +94,13 @@ export default function RootLayout({
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <TwSizeIndicator />
         <ThemeProviders>
-          <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider>
                 <Header />
                 <main className="mb-auto">{children}</main>
+                <Analytics />
+                <SpeedInsights />
               </SearchProvider>
               <Footer />
             </div>
