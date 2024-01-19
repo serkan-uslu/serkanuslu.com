@@ -1,12 +1,8 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
-import NewsletterForm from '@/components/NewsletterForm'
 import { createTranslation } from './i18n/server'
 import { LocaleTypes } from './i18n/settings'
-import Tools from '@/components/Tools'
-import ToolList from '@/data/tools'
 
 interface Post {
   slug: string

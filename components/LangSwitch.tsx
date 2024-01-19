@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react'
-import { usePathname, useParams, useSelectedLayoutSegments, useRouter } from 'next/navigation'
-import { useOuterClick } from './util/useOuterClick'
-import { LocaleTypes, locales } from 'app/[locale]/i18n/settings'
 import { allBlogs } from '.contentlayer/generated'
+import { LocaleTypes, locales } from 'app/[locale]/i18n/settings'
 import slugMap from 'app/[locale]/localeid-map.json'
+import { useParams, usePathname, useRouter, useSelectedLayoutSegments } from 'next/navigation'
+import { useRef, useState } from 'react'
+import { useOuterClick } from './util/useOuterClick'
 
 const LangSwitch = () => {
   const pathname = usePathname()

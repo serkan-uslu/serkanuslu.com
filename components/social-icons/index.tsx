@@ -1,5 +1,4 @@
-import { Mail, Github, Facebook, Youtube, Linkedin, Twitter, Medium, X, Mastodon } from './icons'
-import siteMetadata from '@/data/siteMetadata'
+import { Facebook, Github, Linkedin, Mail, Mastodon, Medium, X, Youtube } from './icons'
 
 // Twitter icon replaced with "X" brand. If you prefer the blue bird icon, replace the X with "twitter" instead
 

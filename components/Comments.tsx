@@ -1,11 +1,11 @@
 'use client'
 
+import siteMetadata from '@/data/siteMetadata'
+import { useTranslation } from 'app/[locale]/i18n/client'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { useParams } from 'next/navigation'
 import { Comments as CommentsComponent } from 'pliny/comments'
 import { useState } from 'react'
-import siteMetadata from '@/data/siteMetadata'
-import { useParams } from 'next/navigation'
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
-import { useTranslation } from 'app/[locale]/i18n/client'
 
 type CommentsProps = {
   slug: string

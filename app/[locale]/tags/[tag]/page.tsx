@@ -1,11 +1,11 @@
-import { Metadata } from 'next'
-import siteMetadata from '@/data/siteMetadata'
-import ClientTagPage from './client'
-import tagData from 'app/[locale]/tag-data.json'
-import { genPageMetadata } from 'app/[locale]/seo'
-import { maintitle } from '@/data/localeMetadata'
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
 import { capitalizeFirstLetter } from '@/components/util/capitalizeFirstLetter'
+import { maintitle } from '@/data/localeMetadata'
+import siteMetadata from '@/data/siteMetadata'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { genPageMetadata } from 'app/[locale]/seo'
+import tagData from 'app/[locale]/tag-data.json'
+import { Metadata } from 'next'
+import ClientTagPage from './client'
 
 type TagsProps = {
   params: { tag: string; locale: LocaleTypes }

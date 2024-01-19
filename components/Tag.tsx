@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { slug } from 'github-slugger'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { slug } from 'github-slugger'
+import Link from 'next/link'
 
 interface TagProps {
   text: string

@@ -1,7 +1,7 @@
 //This file is the most important for SEO purposes so be sure to configure it perfectly with your project settings
-import { MetadataRoute } from 'next'
-import { allBlogs } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
+import { allBlogs } from 'contentlayer/generated'
+import { MetadataRoute } from 'next'
 import { fallbackLng, secondLng } from './[locale]/i18n/locales'
 
 export default function sitemap(): MetadataRoute.Sitemap {

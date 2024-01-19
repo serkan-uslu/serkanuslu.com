@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
-import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
-import { useParams } from 'next/navigation'
 import { useTranslation } from 'app/[locale]/i18n/client'
 import type { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { useParams } from 'next/navigation'
+import { useState } from 'react'
+import Link from './Link'
 
 const MobileNav = () => {
   const locale = useParams()?.locale as LocaleTypes

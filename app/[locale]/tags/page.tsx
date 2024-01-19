@@ -1,9 +1,9 @@
-import { Metadata } from 'next'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import { slug } from 'github-slugger'
-import tagData from 'app/[locale]/tag-data.json'
 import { genPageMetadata } from 'app/[locale]/seo'
+import tagData from 'app/[locale]/tag-data.json'
+import { slug } from 'github-slugger'
+import { Metadata } from 'next'
 import { createTranslation } from '../i18n/server'
 import { LocaleTypes } from '../i18n/settings'
 

@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useTranslation } from 'app/[locale]/i18n/client'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
 import { useTheme } from 'next-themes'
 import { useParams } from 'next/navigation'
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
-import { useTranslation } from 'app/[locale]/i18n/client'
+import { useEffect, useState } from 'react'
 
 const ThemeSwitch = () => {
   const locale = useParams()?.locale as LocaleTypes

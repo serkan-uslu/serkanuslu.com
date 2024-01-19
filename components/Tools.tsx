@@ -1,9 +1,9 @@
 'use client'
 
-import Image from 'next/image'
-import { useParams, usePathname } from 'next/navigation'
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
 import { useTranslation } from 'app/[locale]/i18n/client'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import Image from 'next/image'
+import { useParams } from 'next/navigation'
 
 export default function Tools({ tools }) {
   const locale = useParams()?.locale as LocaleTypes
@@ -20,7 +20,7 @@ export default function Tools({ tools }) {
             href={item.link}
             key={index}
             title={item.altText}
-            className="fl20 h-20 w-20 items-center justify-center border-2 bg-white p-4"
+            className="fl20 h-12 w-12 items-center justify-center border-2 bg-white p-1"
           >
             <Image
               width={18}

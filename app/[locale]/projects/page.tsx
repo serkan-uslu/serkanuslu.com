@@ -1,8 +1,8 @@
-import { Metadata } from 'next'
-import Project from './project'
 import { genPageMetadata } from 'app/[locale]/seo'
+import { Metadata } from 'next'
 import { createTranslation } from '../i18n/server'
 import { LocaleTypes } from '../i18n/settings'
+import Project from './project'
 
 type ProjectsProps = {
   params: { locale: LocaleTypes }

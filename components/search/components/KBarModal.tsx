@@ -1,17 +1,17 @@
 'use client'
-import { useParams } from 'next/navigation'
 import { useTranslation } from 'app/[locale]/i18n/client'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
 import {
-  KBarPortal,
-  KBarSearch,
+  Action,
   KBarAnimator,
+  KBarPortal,
   KBarPositioner,
   KBarResults,
+  KBarSearch,
   useMatches,
-  Action,
   useRegisterActions,
 } from 'kbar'
+import { useParams } from 'next/navigation'
 
 export const KBarModal = ({ actions, isLoading }: { actions: Action[]; isLoading: boolean }) => {
   const locale = useParams()?.locale as LocaleTypes

@@ -1,9 +1,9 @@
-import { Metadata } from 'next'
 import { POSTS_PER_PAGE } from '@/data/postsPerPage'
 import ListLayout from '@/layouts/ListLayoutWithTags'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/[locale]/seo'
+import { allBlogs } from 'contentlayer/generated'
+import { Metadata } from 'next'
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { createTranslation } from '../i18n/server'
 import { LocaleTypes } from '../i18n/settings'
 

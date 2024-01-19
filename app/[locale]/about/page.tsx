@@ -1,13 +1,11 @@
-import { Metadata } from 'next'
-import { Authors, allAuthors } from 'contentlayer/generated'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '@/layouts/AuthorLayout'
-import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/[locale]/seo'
+import { Authors, allAuthors } from 'contentlayer/generated'
+import { Metadata } from 'next'
+import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { coreContent } from 'pliny/utils/contentlayer'
 import { createTranslation } from '../i18n/server'
 import { LocaleTypes } from '../i18n/settings'
-import Tools from '@/components/Tools'
-import ToolList from '@/data/tools'
 
 type AboutProps = {
   params: { locale: LocaleTypes }
@@ -32,7 +30,6 @@ export default async function Page({ params: { locale } }: AboutProps) {
       <AuthorLayout params={{ locale: locale }} content={mainContent}>
         <MDXLayoutRenderer code={author.body.code} />
       </AuthorLayout>
-      <Tools tools={ToolList} />
     </>
   )
 }

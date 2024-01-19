@@ -1,10 +1,10 @@
-import { useState, useEffect, FC, ReactNode } from 'react'
 import type { Action } from 'kbar'
 import { KBarProvider } from 'kbar'
 import { useRouter } from 'next/navigation.js'
-import { KBarModal } from './KBarModal'
 import { CoreContent, MDXDocument } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
+import { FC, ReactNode, useEffect, useState } from 'react'
+import { KBarModal } from './KBarModal'
 
 export interface KBarSearchProps {
   searchDocumentsPath: string | false

@@ -1,16 +1,14 @@
-import { ReactNode } from 'react'
 import Image from '@/components/Image'
-import Bleed from 'pliny/ui/Bleed'
-import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
-import Comments from '@/components/Comments'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
-import SectionContainer from '@/components/SectionContainer'
-import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import SectionContainer from '@/components/SectionContainer'
 import Share from '@/components/Share'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import type { Blog } from 'contentlayer/generated'
+import Bleed from 'pliny/ui/Bleed'
+import { CoreContent } from 'pliny/utils/contentlayer'
+import { ReactNode } from 'react'
 
 interface PostBannerProps {
   content: CoreContent<Blog>

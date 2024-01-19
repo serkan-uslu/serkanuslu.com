@@ -1,17 +1,17 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-import { motion } from 'framer-motion'
-import { slug } from 'github-slugger'
-import { formatDate } from 'pliny/utils/formatDate'
-import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import tagData from 'app/[locale]/tag-data.json'
-import { fallbackLng } from 'app/[locale]/i18n/locales'
 import { useTranslation } from 'app/[locale]/i18n/client'
+import { fallbackLng } from 'app/[locale]/i18n/locales'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import tagData from 'app/[locale]/tag-data.json'
+import type { Blog } from 'contentlayer/generated'
+import { motion } from 'framer-motion'
+import { slug } from 'github-slugger'
+import { usePathname } from 'next/navigation'
+import { CoreContent } from 'pliny/utils/contentlayer'
+import { formatDate } from 'pliny/utils/formatDate'
 
 interface PaginationProps {
   totalPages: number

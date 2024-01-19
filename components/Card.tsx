@@ -1,11 +1,11 @@
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { useParams } from 'next/navigation'
 import React from 'react'
 import Image from './Image'
 import Link from './Link'
-import { useParams } from 'next/navigation'
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
 
-import { motion } from 'framer-motion'
 import { useTranslation } from 'app/[locale]/i18n/client'
+import { motion } from 'framer-motion'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: -25 },

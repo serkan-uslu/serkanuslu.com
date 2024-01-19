@@ -1,17 +1,10 @@
 'use client'
 
-import Link from './Link'
-import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-
-import { useParams } from 'next/navigation'
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
-import { useTranslation } from 'app/[locale]/i18n/client'
+import siteMetadata from '@/data/siteMetadata'
+import Link from './Link'
 
 export default function Footer() {
-  const locale = useParams()?.locale as LocaleTypes
-  const { t } = useTranslation(locale, 'footer')
-
   return (
     <>
       <footer>

@@ -1,11 +1,11 @@
 'use client'
 
-import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-import { useParams, usePathname } from 'next/navigation'
+import siteMetadata from '@/data/siteMetadata'
 import { useTranslation } from 'app/[locale]/i18n/client'
 import { fallbackLng, secondLng } from 'app/[locale]/i18n/locales'
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
+import { useParams, usePathname } from 'next/navigation'
 
 type ShareProps = { title: string; description?: string; slug: string; className?: string }
 

@@ -1,10 +1,13 @@
-import { ReactNode } from 'react'
-import type { Authors } from 'contentlayer/generated'
-import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
+import SocialIcon from '@/components/social-icons'
+import type { Authors } from 'contentlayer/generated'
+import { ReactNode } from 'react'
 
-import { LocaleTypes } from 'app/[locale]/i18n/settings'
 import { createTranslation } from 'app/[locale]/i18n/server'
+import { LocaleTypes } from 'app/[locale]/i18n/settings'
+
+import Tools from '@/components/Tools'
+import ToolList from '@/data/tools'
 
 interface AuthorLayoutProps {
   children: ReactNode
@@ -53,6 +56,7 @@ export default async function AuthorLayout({
           </div>
         </div>
       </div>
+      <Tools tools={ToolList} />
     </>
   )
 }

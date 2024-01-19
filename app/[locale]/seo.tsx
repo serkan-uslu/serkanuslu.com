@@ -1,6 +1,6 @@
-import { Metadata } from 'next'
+import { maindescription, maintitle } from '@/data/localeMetadata'
 import siteMetadata from '@/data/siteMetadata'
-import { maintitle, maindescription } from '@/data/localeMetadata'
+import { Metadata } from 'next'
 import { LocaleTypes } from './i18n/settings'
 
 interface PageSEOProps {

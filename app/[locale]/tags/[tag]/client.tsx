@@ -1,11 +1,11 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
 import { POSTS_PER_PAGE } from '@/data/postsPerPage'
-import { slug } from 'github-slugger'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allBlogs } from 'contentlayer/generated'
+import { slug } from 'github-slugger'
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { useEffect, useState } from 'react'
 
 import { LocaleTypes } from 'app/[locale]/i18n/settings'
 
