@@ -1,4 +1,4 @@
-import { Facebook, Github, Linkedin, Mail, Mastodon, Medium, X, Youtube } from './icons'
+import { Facebook, Github, Linkedin, Mail, Medium, X, Youtube } from './icons'
 
 // Twitter icon replaced with "X" brand. If you prefer the blue bird icon, replace the X with "twitter" instead
 
@@ -10,7 +10,6 @@ const components = {
   linkedin: Linkedin,
   twitter: X,
   medium: Medium,
-  mastodon: Mastodon,
 }
 
 type SocialIconProps = {
