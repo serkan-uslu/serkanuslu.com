@@ -91,11 +91,6 @@ const ToolList: Tool[] = [
     altText: 'redux',
   },
   {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
-    name: 'tensorflow',
-    altText: 'tensorflow',
-  },
-  {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     name: 'git',
     altText: 'git',
