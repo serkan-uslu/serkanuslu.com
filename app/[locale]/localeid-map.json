@@ -4,7 +4,7 @@
     "tr": "articles/git-hook-commit-message"
   },
   "my-website": {
-    "tr": "articles/yeni-websitem",
-    "en": "posts/my-website"
+    "en": "posts/my-website",
+    "tr": "articles/yeni-websitem"
   }
 }
