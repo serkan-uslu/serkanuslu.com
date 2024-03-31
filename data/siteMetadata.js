@@ -1,7 +1,3 @@
-/**
- * @type {PlinyConfig}
- */
-
 const siteMetadata = {
   title: 'Serkan USLU | Frontend Developer',
   author: 'Serkan USLU',
