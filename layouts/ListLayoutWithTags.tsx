@@ -147,7 +147,7 @@ export default function ListLayoutWithTags({
           <div>
             <motion.ul variants={container} initial="hidden" animate="show">
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags, language, link } = post
+                const { path, date, title, summary, tags, language, link, readingTime } = post
                 if (language === locale) {
                   return (
                     <motion.li variants={item} key={path} className="py-5">
@@ -189,6 +189,10 @@ export default function ListLayoutWithTags({
                           <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                             {summary!.length > 149 ? `${summary!.substring(0, 149)}...` : summary}
                           </div>
+                          <p className="mb-1 text-sm text-gray-300">
+                            {readingTime?.minutes ? Math.round(readingTime.minutes) : 0}{' '}
+                            {t('readtime')}
+                          </p>
                         </div>
                       </article>
                     </motion.li>

@@ -40,7 +40,7 @@ export default async function PostLayout({
   children,
   params: { locale },
 }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags, language } = content
+  const { filePath, path, slug, date, title, tags, language, readingTime } = content
   const basePath = path.split('/')[0]
   const { t } = await createTranslation(locale, 'home')
   return (
@@ -62,6 +62,9 @@ export default async function PostLayout({
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
+                <p className="mb-1 text-sm text-gray-400">
+                  {readingTime?.minutes ? Math.round(readingTime.minutes) : 0} {t('readtime')}
+                </p>
               </div>
             </div>
           </header>

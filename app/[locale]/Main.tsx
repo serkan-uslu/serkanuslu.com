@@ -85,7 +85,7 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
                             </div>
                           </div>
                           <div className="text-base font-medium leading-6">
-                            <p className="mb-1">
+                            <p className="mb-1 text-sm text-gray-400">
                               {readingTime?.minutes ? Math.round(readingTime.minutes) : 0}{' '}
                               {t('readtime')}
                             </p>

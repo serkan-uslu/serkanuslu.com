@@ -25,7 +25,7 @@ export default async function PostLayout({
   children,
   params: { locale },
 }: PostSimpleProps) {
-  const { slug, date, title, language } = content
+  const { slug, date, title, language, readingTime } = content
   const { t } = await createTranslation(locale, 'home')
   return (
     <SectionContainer>
