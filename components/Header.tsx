@@ -42,7 +42,7 @@ const Header = () => {
               return (
                 <Link
                   key={link.title}
-                  href={`/${locale}${link.href}`}
+                  href={link.outlink ? link.href : `/${locale}${link.href}`}
                   className={`hidden font-medium ${
                     isSelected ? 'text-primary-500' : 'text-gray-900 dark:text-gray-100'
                   }  sm:block`}

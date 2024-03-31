@@ -5,7 +5,6 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import TwSizeIndicator from '@/components/helper/TwSizeIndicator'
-import UnderConstruction from '@/components/helper/UnderConstruction'
 import { SearchProvider } from '@/components/search/SearchProvider'
 import { maindescription, maintitle } from '@/data/localeMetadata'
 import siteMetadata from '@/data/siteMetadata'
@@ -94,7 +93,6 @@ export default function RootLayout({
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <TwSizeIndicator />
-        <UnderConstruction />
         <ThemeProviders>
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
