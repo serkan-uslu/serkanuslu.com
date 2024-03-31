@@ -2,6 +2,72 @@
 
 Welcome to my personal website! After a long break, I've finally taken the time to create my own space on the internet. It's a blend of professional accomplishments and personal passions, showcasing projects, writings, and ideas that I've been nurturing over time. As you explore these pages, you'll get a glimpse into the things that drive and inspire me. Feel free to reach out if you find something that resonates with you or if you're curious to learn more!
 
+## Dependencies
+
+### @next/bundle-analyzer
+
+@next/bundle-analyzer npm paketi, Next.js projeleri için bir eklenti olarak işlev görür. Bu paket, projenizin JavaScript paketlerinin boyutlarını ve dağılımlarını görselleştirmek için Webpack Bundle Analyzer aracını kullanır. Görselleştirme, geliştiricilere hangi paketlerin son kullanıcıya gönderilen JavaScript boyutunu en çok artırdığını anlamada yardımcı olur. Bu bilgiyle donanmış geliştiriciler, gerekli olduğunda kodlarını optimize edebilir ve gereksiz bağımlılıkları kaldırabilirler, böylece uygulamanın yükleme süresini iyileştirebilir ve genel kullanıcı deneyimini artırabilirler.
+
+Paketin kullanımı basittir: öncelikle projenize @next/bundle-analyzer paketini eklersiniz, ardından Next.js yapılandırma dosyanızda (next.config.js) bu eklentiyi yapılandırarak etkinleştirirsiniz. Bu yapılandırma, analiz sürecini özelleştirmenize olanak tanır, örneğin analiz raporlarının hangi modda (sunucu ya da istemci) ve ne zaman (geliştirme veya üretim yapısı sırasında) oluşturulacağını belirleyebilirsiniz. Raporlar, uygulamanızın farklı bölümlerinin nasıl birleştirildiğini ve boyutlarını bir sunucu üzerinden veya statik dosya olarak görselleştirir, böylece potansiyel optimizasyon alanlarını kolayca belirleyebilirsiniz.
+
+package.json dosyası içerisinde scripts bölümündeki komutu çalıştırabilirsiniz.
+
+```json
+npm run analyze
+```
+
+İşlem bittiğinde .next klasörü içerisinde **analyze** isimli dosyada birden fazla html dosya oluşturulacaktır. Bunlar;
+
+### edge.html
+
+---
+
+### client.html
+
+---
+
+### nodejs.html
+
+---
+
+```json
+"analyze": "cross-env ANALYZE=true next build",
+```
+
+## @vercel/analytics
+
+## @vercel/speed-insights
+
+## autoprefixer
+
+## contentlayer
+
+## esbuild
+
+## framer-motion
+
+## github-slugger
+
+## pliny
+
+## postcss
+
+## reading-time
+
+## commitlint
+
+## eslint
+
+## husky
+
+## lint-staged => lint-staged
+
+## prettier
+
+## prettier-plugin-tailwindcss
+
+# scripts komutları
+
 ## Built With
 
 - Next.js

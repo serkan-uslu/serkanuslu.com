@@ -4,6 +4,7 @@
   "greeting": "Latest Posts",
   "description": "A blog created with Next.js, i18n and Tailwind.css",
   "more": "Read more",
+  "readtime": "min read",
   "goToLink": "Go To Link",
   "all": "All posts",
   "moreaboutme": "More about me",
