@@ -90,7 +90,7 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!mainPosts.length && t('noposts')}
-          {mainPosts.slice(0, MAX_DISPLAY).map((post) => {
+          {mainPosts.map((post) => {
             const { slug, date, title, summary } = post
             return (
               <li key={slug} className="py-12">
