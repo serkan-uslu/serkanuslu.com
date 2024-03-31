@@ -1,11 +1,11 @@
+import { createTranslation } from '@/i18n/server'
+import { LocaleTypes } from '@/i18n/settings'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { genPageMetadata } from 'app/[locale]/seo'
 import { Authors, allAuthors } from 'contentlayer/generated'
 import { Metadata } from 'next'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { createTranslation } from '../i18n/server'
-import { LocaleTypes } from '../i18n/settings'
 
 type AboutProps = {
   params: { locale: LocaleTypes }

@@ -1,11 +1,11 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
+import { createTranslation } from '@/i18n/server'
+import { LocaleTypes } from '@/i18n/settings'
 import { genPageMetadata } from 'app/[locale]/seo'
 import tagData from 'app/[locale]/tag-data.json'
 import { slug } from 'github-slugger'
 import { Metadata } from 'next'
-import { createTranslation } from '../i18n/server'
-import { LocaleTypes } from '../i18n/settings'
 
 type TagsProps = {
   params: { locale: LocaleTypes }

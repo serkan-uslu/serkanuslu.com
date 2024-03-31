@@ -1,7 +1,7 @@
+import { createTranslation } from '@/i18n/server'
+import { LocaleTypes } from '@/i18n/settings'
 import { genPageMetadata } from 'app/[locale]/seo'
 import { Metadata } from 'next'
-import { createTranslation } from '../i18n/server'
-import { LocaleTypes } from '../i18n/settings'
 import Project from './project'
 
 type ProjectsProps = {

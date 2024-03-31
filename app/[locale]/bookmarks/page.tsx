@@ -1,11 +1,11 @@
 import { POSTS_PER_PAGE } from '@/data/postsPerPage'
+import { createTranslation } from '@/i18n/server'
+import { LocaleTypes } from '@/i18n/settings'
 import ListLayout from '@/layouts/ListLayoutBookmarks'
 import { genPageMetadata } from 'app/[locale]/seo'
 import { allBookmarks } from 'contentlayer/generated'
 import { Metadata } from 'next'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-import { createTranslation } from '../i18n/server'
-import { LocaleTypes } from '../i18n/settings'
 
 type BlogPageProps = {
   params: { locale: LocaleTypes }
