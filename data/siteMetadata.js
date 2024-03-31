@@ -1,4 +1,7 @@
-/** @type {import("pliny/config").PlinyConfig } */
+/**
+ * @type {PlinyConfig}
+ */
+
 const siteMetadata = {
   title: 'Serkan USLU | Frontend Developer',
   author: 'Serkan USLU',
