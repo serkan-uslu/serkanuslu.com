@@ -4,6 +4,11 @@ import { formatDate } from 'pliny/utils/formatDate'
 import { createTranslation } from './i18n/server'
 import { LocaleTypes } from './i18n/settings'
 
+interface ReadingTime {
+  text: string
+  time: string
+  minutes: number
+}
 interface Post {
   slug: string
   date: string
@@ -12,6 +17,7 @@ interface Post {
   tags: string[]
   language: string
   draft?: boolean
+  readingTime?: ReadingTime
 }
 
 interface HomeProps {
@@ -23,6 +29,7 @@ const MAX_DISPLAY = 5
 
 export default async function Home({ posts, params: { locale } }: HomeProps) {
   const { t } = await createTranslation(locale, 'home')
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -43,7 +50,8 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
             .filter((p) => p.language === locale)
             .slice(0, MAX_DISPLAY)
             .map((post) => {
-              const { slug, date, title, summary, tags, language } = post
+              const { slug, date, title, summary, tags, language, readingTime } = post
+
               if (language === locale) {
                 return (
                   <li key={slug} className="py-12">
@@ -77,6 +85,10 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
                             </div>
                           </div>
                           <div className="text-base font-medium leading-6">
+                            <p className="mb-1">
+                              {readingTime?.minutes ? Math.round(readingTime.minutes) : 0}{' '}
+                              {t('readtime')}
+                            </p>
                             <Link
                               href={`/${locale}/blog/${slug}`}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"

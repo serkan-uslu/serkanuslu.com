@@ -4,6 +4,7 @@
   "greeting": "En son Yazılarım",
   "description": "Next.js, i18n ve Tailwind.css ile oluşturulmuş bir blog",
   "more": "Daha fazla oku",
+  "readtime": "dk okuma süresi",
   "goToLink": "Linke Git",
   "all": "Tüm makaleler",
   "moreaboutme": "Benim hakkımda daha fazlası",
