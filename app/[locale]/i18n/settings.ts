@@ -1,5 +1,5 @@
+import { fallbackLng, secondLng } from '@/i18n/locales'
 import type { InitOptions } from 'i18next'
-import { fallbackLng, secondLng } from './locales'
 
 export const locales = [fallbackLng, secondLng] as const
 export type LocaleTypes = (typeof locales)[number]

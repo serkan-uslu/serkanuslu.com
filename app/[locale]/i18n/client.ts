@@ -1,11 +1,11 @@
 'use client'
 
+import { getOptions, locales, type LocaleTypes } from '@/i18n/settings'
 import i18next, { i18n } from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import resourcesToBackend from 'i18next-resources-to-backend'
 import { useEffect, useState } from 'react'
 import { initReactI18next, useTranslation as useTransAlias } from 'react-i18next'
-import { getOptions, locales, type LocaleTypes } from './settings'
 
 const runsOnServerSide = typeof window === 'undefined'
 
@@ -16,7 +16,7 @@ i18next
   .use(
     resourcesToBackend(
       (language: LocaleTypes, namespace: string) =>
-        import(`./locales/${language}/${namespace}.json`)
+        import(`@/i18n/locales/${language}/${namespace}.json`)
     )
   )
   .init({
