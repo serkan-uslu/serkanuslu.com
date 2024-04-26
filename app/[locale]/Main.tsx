@@ -31,11 +31,18 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
 
   const mainPosts = [
     {
+      slug: 'https://medium.com/@serkan-uslu/videolar%C4%B1n-h%C4%B1z%C4%B1na-h%C3%BCkmedin-1cbcd1855041',
+      date: 'Apr 26, 2024',
+      title: 'Videoların hızına hükmedin!',
+      summary:
+        'Çoğumuz, özellikle YouTube ve çeşitli eğitim platformlarında video izlerken, videoların hızını değiştirmek istemişizdir. Var olan hız ayarlarının yetersiz...',
+    },
+    {
       slug: 'https://medium.com/@serkan-uslu/cookie-g%C3%BCvenli%C4%9Fi-httponly-ve-secure-flagler-ile-veri-koruma-1bc495238468',
       date: 'Apr 15, 2024',
       title: 'Cookie Güvenliği: HttpOnly ve Secure Flag’ler ile Veri Koruma',
       summary:
-        'Web güvenliği unsurlarından biri olan “cookie”ler ve bu cookie’lerin güvenliğini artırmak için kullanılan yöntemlerden “HttpOnly” ve',
+        'Web güvenliği unsurlarından biri olan “cookie”ler ve bu cookie’lerin güvenliğini artırmak için kullanılan yöntemlerden “HttpOnly” ve...',
     },
     {
       slug: 'https://medium.com/@serkan-uslu/kodunuzu-konu%C5%9Fturun-jsdoc-i%CC%87le-dok%C3%BCmantasyon-yazmak-c84540971afc',
