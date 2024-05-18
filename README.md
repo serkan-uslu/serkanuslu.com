@@ -1,6 +1,6 @@
 # serkanuslu.com
 
-This project is available in multiple languages:
+This project is available in multiple languages: / Bu proje birden fazla dilde mevcuttur:
 
-- [Türkçe](README.tr.md)
 - [English](README.en.md)
+- [Türkçe](README.tr.md)
