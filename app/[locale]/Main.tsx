@@ -31,6 +31,27 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
 
   const mainPosts = [
     {
+      slug: 'https://medium.com/@serkan-uslu/docker-bu-bilgisayarda-%C3%A7al%C4%B1%C5%9Fm%C4%B1yor-sorununa-elveda-6e6ec82bfe13',
+      date: 'May 17, 2024',
+      title: 'Docker: “Bu Bilgisayarda Çalışmıyor!” Sorununa Elveda',
+      summary:
+        'Docker, yazılımlarınızı bir konteyner içinde paketlemenize olanak tanıyan bir platformdur...',
+    },
+    {
+      slug: 'https://medium.com/@serkan-uslu/html-caching-sayfa-h%C4%B1z%C4%B1n%C4%B1z%C4%B1-art%C4%B1r%C4%B1n-fd50d104bce1',
+      date: 'May 15, 2024',
+      title: 'HTML Caching: Sayfa Hızınızı Artırın',
+      summary:
+        'Web performans optimizasyonu, kullanıcı deneyimini iyileştirmek için kritik öneme sahiptir. Bu optimizasyon yöntemlerinden biri de HTML…',
+    },
+    {
+      slug: 'https://medium.com/@serkan-uslu/api-i%CC%87steklerinde-ustala%C5%9F%C4%B1n-axios-interceptors-ile-etkili-y%C3%B6netim-teknikleri-d94d604d4f96',
+      date: 'Apr 29, 2024',
+      title: 'API İsteklerinde Ustalaşın: Axios Interceptors ile Etkili Yönetim Teknikleri',
+      summary:
+        'Axios, JavaScript dünyasında popüler bir HTTP istemci kütüphanesidir. React, Vue.js gibi modern frontend çerçeveleri ile uyumlu bir şekilde…',
+    },
+    {
       slug: 'https://medium.com/@serkan-uslu/videolar%C4%B1n-h%C4%B1z%C4%B1na-h%C3%BCkmedin-1cbcd1855041',
       date: 'Apr 26, 2024',
       title: 'Videoların hızına hükmedin!',
