@@ -41,7 +41,14 @@ const Card: React.FC<CardProps> = ({ title, description, imgSrc, href }) => {
               href={href.startsWith('http') ? href : `/${locale}${href}`}
               aria-label={`${t('linkto')}${title}`}
             >
-              <Image
+              {/* <Image
+                alt={title}
+                src={imgSrc}
+                className="object-cover object-center md:h-36 lg:h-48"
+                width={544}
+                height={306}
+              /> */}
+              <img
                 alt={title}
                 src={imgSrc}
                 className="object-cover object-center md:h-36 lg:h-48"

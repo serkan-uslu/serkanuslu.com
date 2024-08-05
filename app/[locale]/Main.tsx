@@ -31,6 +31,40 @@ export default async function Home({ posts, params: { locale } }: HomeProps) {
 
   const mainPosts = [
     {
+      slug: 'https://medium.com/@serkan-uslu/huggingface-photo-background-generation-ile-g%C3%B6rsel-arka-plan%C4%B1-de%C4%9Fi%C5%9Ftirme-86052b5b5a68',
+      date: 'Aug 2, 2024',
+      title: 'HuggingFace: Photo-Background-Generation ile Görsel Arka Planı Değiştirme',
+      summary:
+        'Bir fotoğraftaki ana nesnenin arkaplanını kaldırıp, yeni bir arkaplan yaratacağız. Bunun için...',
+    },
+    {
+      slug: 'https://medium.com/@serkan-uslu/frontend-g%C3%BCvenli%C4%9Fi-web-uygulamalar%C4%B1n%C4%B1z%C4%B1-koruman%C4%B1n-yollar%C4%B1-ba8585c536b6',
+      date: 'May 23, 2024',
+      title: 'Frontend Güvenliği: Web Uygulamalarınızı Korumanın Yolları',
+      summary:
+        'Frontend geliştiricileri olarak, kullanıcı arayüzlerini ve deneyimlerini iyileştirmeye odaklanırken, güvenlik bazen geri planda kalabilir. Ancak, günümüz dijital dünyasında güvenlik en az işlevsellik ve estetik kadar önemlidir....',
+    },
+    {
+      slug: 'https://medium.com/@serkan-uslu/secure-software-development-life-cycle-s-sdlc-580f0cf86d8e',
+      date: 'May 22, 2024',
+      title: 'Secure -Software Development Life Cycle(S-SDLC)',
+      summary:
+        'Yazılım geliştirme karmaşık ve zorlu bir süreçtir. Belirli bir plan ve yöntemle ilerlenmediği takdirde içinden çıkılmaz bir hal alması kaçınılmazdır...',
+    },
+    {
+      slug: 'https://medium.com/@serkan-uslu/design-system-par%C3%A7alardan-b%C3%BCt%C3%BCne-0acd3d54bfcb',
+      date: 'May 17, 2024',
+      title: 'Design System: Parçalardan Bütüne',
+      summary:
+        'Bu yazıda tasarım sistemi (Design System) üzerinde duracağız. Tasarım sisteminin ne olduğunu anlayarak neden ihtiyacımız olduğunu irdeleyeceğiz...',
+    },
+    {
+      slug: 'https://medium.com/@serkan-uslu/alice-harikalar-diyar%C4%B1nda-2b60ecdf1cb2',
+      date: 'May 20, 2024',
+      title: 'Alice Harikalar Diyarında',
+      summary: 'Nereye gideceğini bilmiyorsan hangi yoldan gideceğinin bir önemi yok...',
+    },
+    {
       slug: 'https://medium.com/@serkan-uslu/docker-bu-bilgisayarda-%C3%A7al%C4%B1%C5%9Fm%C4%B1yor-sorununa-elveda-6e6ec82bfe13',
       date: 'May 17, 2024',
       title: 'Docker: “Bu Bilgisayarda Çalışmıyor!” Sorununa Elveda',

@@ -25,11 +25,11 @@ const ToolList: Tool[] = [
     name: 'typescript',
     altText: 'typescript',
   },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg',
-    name: 'babel',
-    altText: 'babel',
-  },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg',
+  //   name: 'babel',
+  //   altText: 'babel',
+  // },
   {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
     name: 'node js',
@@ -40,11 +40,11 @@ const ToolList: Tool[] = [
     name: 'npm',
     altText: 'npm',
   },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg',
-    name: 'yarn',
-    altText: 'yarn',
-  },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg',
+  //   name: 'yarn',
+  //   altText: 'yarn',
+  // },
   {
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
     name: 'react',
@@ -55,26 +55,26 @@ const ToolList: Tool[] = [
     name: 'next js',
     altText: 'next js',
   },
-  {
-    logo: 'https://reactnative.dev/img/header_logo.svg',
-    name: 'react native',
-    altText: 'react native',
-  },
+  // {
+  //   logo: 'https://reactnative.dev/img/header_logo.svg',
+  //   name: 'react native',
+  //   altText: 'react native',
+  // },
   {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
     name: 'jest',
     altText: 'jest',
   },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg',
-    name: 'storybook',
-    altText: 'storybook',
-  },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg',
-    name: 'webpack',
-    altText: 'webpack',
-  },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg',
+  //   name: 'storybook',
+  //   altText: 'storybook',
+  // },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg',
+  //   name: 'webpack',
+  //   altText: 'webpack',
+  // },
   {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg',
     name: 'eslint',
@@ -85,11 +85,11 @@ const ToolList: Tool[] = [
     name: 'prettier',
     altText: 'prettier',
   },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
-    name: 'redux',
-    altText: 'redux',
-  },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+  //   name: 'redux',
+  //   altText: 'redux',
+  // },
   {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     name: 'git',
@@ -110,36 +110,36 @@ const ToolList: Tool[] = [
     name: 'chrome',
     altText: 'chrome',
   },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/safari/safari-original.svg',
-    name: 'safari',
-    altText: 'safari',
-  },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg',
-    name: 'firefox',
-    altText: 'firefox',
-  },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/safari/safari-original.svg',
+  //   name: 'safari',
+  //   altText: 'safari',
+  // },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg',
+  //   name: 'firefox',
+  //   altText: 'firefox',
+  // },
   {
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
     name: 'github',
     altText: 'github',
   },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-    name: 'figma',
-    altText: 'figma',
-  },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
-    name: 'firebase',
-    altText: 'firebase',
-  },
-  {
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg',
-    name: 'jira',
-    altText: 'jira',
-  },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+  //   name: 'figma',
+  //   altText: 'figma',
+  // },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+  //   name: 'firebase',
+  //   altText: 'firebase',
+  // },
+  // {
+  //   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg',
+  //   name: 'jira',
+  //   altText: 'jira',
+  // },
 ]
 
 export default ToolList
